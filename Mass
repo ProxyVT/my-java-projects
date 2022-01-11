@@ -13,11 +13,11 @@ public class Mass {
 		float tons = centners * 0.1f;
 		double kilotons = tons * 0.001f;
         
-		System.out.printf("Mass of the dinosaur in grams: %f \n", grams);
-        System.out.printf("Mass of the dinosaur in kilograms: %f \n", kilograms);
-        System.out.printf("Mass of the dinosaur in centners: %f \n", centners);
-        System.out.printf("Mass of the dinosaur in tons: %f \n", tons);
-        System.out.printf("Mass of the dinosaur in kilotons: %e \n", kilotons);
+		System.out.printf("Mass of the dinosaur in grams: %.7f \n", grams);
+        System.out.printf("Mass of the dinosaur in kilograms: %.7f \n", kilograms);
+        System.out.printf("Mass of the dinosaur in centners: %.7f \n", centners);
+        System.out.printf("Mass of the dinosaur in tons: %.7f \n", tons);
+        System.out.printf("Mass of the dinosaur in kilotons: %.7f \n", kilotons);
 		
         in.close();
     }

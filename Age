@@ -13,8 +13,8 @@ public class Age {
 		int days = weeks * 365;
 		long hours = days * 8760L;
 		long minutes = hours * 525600L;
-		double seconds = minutes * 31536000L;
-		double milliseconds = seconds * 31536000000L;
+		double seconds = minutes * 31536000;
+		double milliseconds = seconds * 31536000000;
         
 		System.out.printf("Your age in years: %d \n", years);
         System.out.printf("Your age in months: %d \n", months);

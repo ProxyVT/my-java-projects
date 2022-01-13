@@ -6,18 +6,18 @@ public class Mass {
            
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter mass of the dinosaur in grams: ");
-        float a = in.nextInt();
-		float grams = a;
-		float kilograms = grams * 0.001f;
-		float centners = kilograms * 0.01f;
-		float tons = centners * 0.1f;
-		double kilotons = tons * 0.001f;
+        int a = in.nextInt();
+	int grams = a;
+	double kilograms = grams * 0.001;
+	double centners = kilograms * 0.01;
+	double tons = centners * 0.1;
+	double kilotons = tons * 0.001;
         
-		System.out.printf("Mass of the dinosaur in grams: %.7f \n", grams);
-        System.out.printf("Mass of the dinosaur in kilograms: %.7f \n", kilograms);
-        System.out.printf("Mass of the dinosaur in centners: %.7f \n", centners);
-        System.out.printf("Mass of the dinosaur in tons: %.7f \n", tons);
-        System.out.printf("Mass of the dinosaur in kilotons: %.7f \n", kilotons);
+	System.out.printf("Mass of the dinosaur in grams: %,d \n", grams);
+        System.out.printf("Mass of the dinosaur in kilograms: %,.3f \n", kilograms);
+        System.out.printf("Mass of the dinosaur in centners: %,.5f \n", centners);
+        System.out.printf("Mass of the dinosaur in tons: %,.6f \n", tons);
+        System.out.printf("Mass of the dinosaur in kilotons: %,.9f \n", kilotons);
 		
         in.close();
     }

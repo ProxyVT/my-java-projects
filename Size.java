@@ -6,8 +6,8 @@ public class Size {
            
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter file size in bytes: ");
-        long a = in.nextInt();
-	long bytes = a;
+        long size = in.nextInt();
+	long bytes = size;
 	long kilobytes = bytes / 1024;
 	double megabytes = kilobytes / 1024;
 	double gigabytes = megabytes / 1024;

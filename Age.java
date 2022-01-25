@@ -4,9 +4,9 @@ public class Age {
    
     public static void main(String[] args) {
            
-        Scanner in = new Scanner(System.in);
-        System.out.print("Please enter your age in years: ");
-        int a = in.nextInt();
+    	Scanner in = new Scanner(System.in);
+    	System.out.print("Please enter your age in years: ");
+    	int a = in.nextInt();
 	int years = a;
 	int months = years * 12;
 	int weeks = months * 54;

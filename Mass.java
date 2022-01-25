@@ -6,8 +6,8 @@ public class Mass {
            
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter mass of the dinosaur in grams: ");
-        int a = in.nextInt();
-	int grams = a;
+        int mass = in.nextInt();
+	int grams = mass;
 	double kilograms = grams * 0.001;
 	double centners = kilograms * 0.01;
 	double tons = centners * 0.1;

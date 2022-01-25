@@ -6,8 +6,8 @@ public class Age {
            
     	Scanner in = new Scanner(System.in);
     	System.out.print("Please enter your age in years: ");
-    	int a = in.nextInt();
-	int years = a;
+    	int age = in.nextInt();
+	int years = age;
 	int months = years * 12;
 	int weeks = months * 54;
 	int days = weeks * 365;

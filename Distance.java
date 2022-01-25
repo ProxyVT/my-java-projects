@@ -6,8 +6,8 @@ public class Distance {
            
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter the distance between two cities in centimeters: ");
-        int a = in.nextInt();
-	int centimeters = a;
+        int distance = in.nextInt();
+	int centimeters = distance;
 	double meters = centimeters * 0.01;
 	double kilometers = meters * 0.001;
         

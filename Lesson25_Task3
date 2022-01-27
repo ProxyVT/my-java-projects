@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Lesson25_Task3 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Input dragon age: ");
+
+		int age = scanner.nextInt();
+		int heads = 3;
+
+		if (age <= 0) {
+			System.out.print("Invalid number");
+			return;
+		}
+
+		if (age <= 200) {
+			heads += age * 3;
+		} else if (age <= 300) {
+			heads += 200 * 3 + (age - 200) * 2;
+		} else if (age > 300) {
+			heads += 200 * 3 + 100 * 2 + (age - 300);
+		}
+
+		System.out.printf("Dragon has %d heads", heads);
+
+		scanner.close();
+
+	}
+}

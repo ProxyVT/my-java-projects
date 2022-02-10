@@ -6,13 +6,13 @@ public class Perimeter_and_area_of_a_rectangle {
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter sides a and b of the rectangle:");
-		double a = scanner.nextInt();
-		double b = scanner.nextInt();
+		double side_a = scanner.nextInt();
+		double side_b = scanner.nextInt();
 		
-		double perimeter = a + a + b + b;
-		double square = a * b;
+		double rectangle_perimeter = side_a * 2 + side_b * 2;
+		double rectangle_square = side_a * side_b;
 		
-		System.out.printf("%f and %f", perimeter, square);
+		System.out.printf("%f and %f", rectangle_perimeter, rectangle_square);
 		scanner.close();
 	}
 }

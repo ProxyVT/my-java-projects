@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Perimeter_and_area_of_the_circle {
+public class Circle {
 
 	public static void main(String[] args) {
 		
@@ -15,4 +15,5 @@ public class Perimeter_and_area_of_the_circle {
 		scanner.close();
 
 	}
+	
 }

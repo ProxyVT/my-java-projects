@@ -6,7 +6,7 @@ public class Circle {
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the radius of the circle: ");
-		double radius = scanner.nextInt();
+		double radius = scanner.nextDouble();
 		
 		double circlePerimeter = 2 * Math.PI * radius; // Формула периметра круга (длинна окружности)
 		double circleArea = Math.PI * Math.pow(radius, 2); // Формула площади круга

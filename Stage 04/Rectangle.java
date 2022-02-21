@@ -6,8 +6,8 @@ public class Rectangle {
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter sides A and B of the rectangle: ");
-		double sideA = scanner.nextInt();
-		double sideB = scanner.nextInt();
+		double sideA = scanner.nextDouble();
+		double sideB = scanner.nextDouble();
 		
 		double perimeter = 2 * (sideA + sideB); // Формула периметра прямоугольника
 		double area = sideA * sideB; // Формула площади прямоугольника
@@ -20,4 +20,3 @@ public class Rectangle {
 	}
 	
 }
-

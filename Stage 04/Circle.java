@@ -6,12 +6,12 @@ public class Circle {
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the radius of the circle: ");
-
 		double radius = scanner.nextInt();
-		double circle_perimeter = 2 * Math.PI * radius; // Формула периметра круга (длинна окружности)
-		double circle_area = Math.PI * Math.pow(radius, 2); // Формула площади круга
+		
+		double circlePerimeter = 2 * Math.PI * radius; // Формула периметра круга (длинна окружности)
+		double circleArea = Math.PI * Math.pow(radius, 2); // Формула площади круга
 
-		System.out.printf("Perimeter (circumference length): %f\nArea: %f", circle_perimeter, circle_area);
+		System.out.printf("Perimeter (circumference length): %f\nArea: %f", circlePerimeter, circleArea);
 		scanner.close();
 
 		return null;

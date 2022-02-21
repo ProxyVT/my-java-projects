@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Shapes {
+public class Main {
 
 	public static final int CUBE = 1;
 	public static final int CIRCLE = 2;
@@ -8,7 +8,7 @@ public class Shapes {
 	public static final int SQUARE = 4;
 	public static final int TRIANGLE = 5;
 	public static final int RIGHT_TRIANGLE = 6;
-	public static int number;						// �������� ������������� �������� ������
+	public static int number;		    // Номер требуемой фигуры 
 
 	public static void main(String[] args) {
 
@@ -17,24 +17,24 @@ public class Shapes {
 				+ "Rectangle - 3\n" + "Square - 4\n" + "Triangle - 5\n" + "Right Triangle - 6\n" + "\nEnter your number:");
 		number = scanner.nextInt();
 
-		switch (number) {
+		switch (number) {   // Ввод пользователем данных расчета фигур
 		case CUBE:
-			Cube.resultCube();
+			Cube.resultCube(); 
 			break;
 		case CIRCLE:
 			Circle.resultCircle();
 			break;
 		case RECTANGLE:
-			Circle.resultRectangle();
+			Rectangle.resultRectangle();
 			break;
 		case SQUARE:
-			Circle.resultSquare();
+			Square.resultSquare();
 			break;
 		case TRIANGLE:
-			Circle.resultTriangle();
+			Triangle.resultTriangle();
 			break;
 		case RIGHT_TRIANGLE:
-			Circle.resultRightTriangle();
+			RightTriangle.resultRightTriangle();
 			break;
 		default:
 			System.out.println("Wrong value!");

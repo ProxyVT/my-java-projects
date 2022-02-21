@@ -6,8 +6,8 @@ public class Square {
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter side A of the square: ");
-
-		double sideA = scanner.nextInt();
+		double sideA = scanner.nextDouble();
+		
 		double squarePerimeter = sideA * 4; // Формула периметра квадрата
 		double squareArea = Math.pow(sideA, 2); // Формула площади квадрата
 

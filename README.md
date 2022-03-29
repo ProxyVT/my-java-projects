@@ -1,2 +1,2 @@
-# my_java_projects
+# my-java-projects
 This for educational process in Java

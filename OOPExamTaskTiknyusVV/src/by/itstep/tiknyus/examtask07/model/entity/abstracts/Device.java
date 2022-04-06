@@ -1,23 +1,23 @@
 package by.itstep.tiknyus.examtask07.model.entity.abstracts;
 
 public class Device {
-	private int weight;
+	private double weight;
 	private double price;
 	private boolean socketStatus;
-	private int powerConsumption;
+	private int power;
 
 	public Device() {
 	}
 
-	public Device(int weight, double price, boolean socketStatus, int powerConsumption) {
+	public Device(double weight, double price, boolean socketStatus, int power) {
 		super();
 		this.weight = weight;
 		this.price = price;
 		this.socketStatus = socketStatus;
-		this.powerConsumption = powerConsumption;
+		this.power = power;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
@@ -41,18 +41,18 @@ public class Device {
 		this.socketStatus = socketStatus;
 	}
 
-	public int getPowerConsumption() {
-		return powerConsumption;
+	public double getPowerConsumption() {
+		return power;
 	}
 
 	public void setPowerConsumption(int powerConsumption) {
-		this.powerConsumption = powerConsumption;
+		this.power = powerConsumption;
 	}
 
 	@Override
 	public String toString() {
-		return "Device [weight=" + weight + ", price=" + price + ", socketStatus=" + socketStatus
-				+ ", powerConsumption=" + powerConsumption + "]";
+		return ", weight = " + weight + ", price = " + price + ", socket status = " + socketStatus
+				+ ", power = " + power + "]";
 	}
 
 }

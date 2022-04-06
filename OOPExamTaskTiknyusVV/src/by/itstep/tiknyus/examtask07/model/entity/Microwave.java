@@ -10,9 +10,9 @@ public class Microwave extends Device {
 		super();
 	}
 
-	public Microwave(double capacity, String fitType, int weight, double price, boolean socketStatus,
-			int powerConsumption) {
-		super(weight, price, socketStatus, powerConsumption);
+	public Microwave(double capacity, String fitType, double weight, double price, boolean socketStatus,
+			int power) {
+		super(weight, price, socketStatus, power);
 		this.capacity = capacity;
 		this.fitType = fitType;
 	}
@@ -37,7 +37,7 @@ public class Microwave extends Device {
 
 	@Override
 	public String toString() {
-		return "Microwave [capacity=" + capacity + ", fitType=" + fitType + "]";
+		return "Microwave [capacity = " + capacity + ", fit type = " + fitType + "" + super.toString();
 	}
 
 }

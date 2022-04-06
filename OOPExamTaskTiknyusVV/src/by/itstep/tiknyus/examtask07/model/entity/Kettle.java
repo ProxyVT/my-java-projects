@@ -10,9 +10,9 @@ public class Kettle extends Device{
 		super();
 	}
 
-	public Kettle(String colour, boolean dryProtection, int weight, double price, boolean socketStatus, 
-			int powerConsumption) {
-		super(weight, price, socketStatus, powerConsumption);
+	public Kettle(String colour, boolean dryProtection, double weight, double price, boolean socketStatus, 
+			int power) {
+		super(weight, price, socketStatus, power);
 		this.colour = colour;
 		this.dryProtection = dryProtection;
 	}
@@ -35,7 +35,7 @@ public class Kettle extends Device{
 
 	@Override
 	public String toString() {
-		return "Kettle [colour=" + colour + ", dryProtection=" + dryProtection + "]";
+		return "Kettle [colour = " + colour + ", dry protection = " + dryProtection + "" + super.toString();
 	}
 
 }

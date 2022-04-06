@@ -10,9 +10,9 @@ public class Fridge extends Device {
 		super();
 	}
 
-	public Fridge(String panelMaterial, int shelves, int weight, double price, boolean socketStatus, 
-			int powerConsumption) {
-		super(weight, price, socketStatus, powerConsumption);
+	public Fridge(String panelMaterial, int shelves, double weight, double price, boolean socketStatus, 
+			int power) {
+		super(weight, price, socketStatus, power);
 		this.panelMaterial = panelMaterial;
 		this.shelves = shelves;
 	}
@@ -38,7 +38,7 @@ public class Fridge extends Device {
 
 	@Override
 	public String toString() {
-		return "Fridge [panelMaterial=" + panelMaterial + ", shelves=" + shelves + "]";
+		return "Fridge [panel material = " + panelMaterial + ", freezer shelves = " + shelves + "" + super.toString();
 	}
 
 }

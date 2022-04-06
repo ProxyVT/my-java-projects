@@ -1,0 +1,41 @@
+package by.itstep.tiknyus.examtask07.model.entity;
+
+import by.itstep.tiknyus.examtask07.model.entity.abstracts.Device;
+
+public class Kettle extends Device{
+	private String colour;
+	private boolean dryProtection;
+
+	public Kettle() {
+		super();
+	}
+
+	public Kettle(String colour, boolean dryProtection, int weight, double price, boolean socketStatus, 
+			int powerConsumption) {
+		super(weight, price, socketStatus, powerConsumption);
+		this.colour = colour;
+		this.dryProtection = dryProtection;
+	}
+
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+
+	public boolean isDryProtection() {
+		return dryProtection;
+	}
+
+	public void setDryProtection(boolean dryProtection) {
+		this.dryProtection = dryProtection;
+	}
+
+	@Override
+	public String toString() {
+		return "Kettle [colour=" + colour + ", dryProtection=" + dryProtection + "]";
+	}
+
+}

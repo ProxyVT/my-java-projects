@@ -31,7 +31,7 @@ public class DeviceCreator {
 	public static Device getTypeDevice(int type) {
 
 		String energyRathing = Data.energy[random.nextInt(Data.energy.length)];
-		int shelves = random.nextInt() * (Data.MAX_FRIDGE_FREEZER_SHELVES - Data.MIN_FRIDGE_FREEZER_SHELVES + 1);
+		int shelves = random.nextInt(Data.MAX_FRIDGE_FREEZER_SHELVES);
 		double weightFrdige = random.nextDouble()
 				* (Data.MAX_FRIDGE_WEIGHT_KILLOGRAMM - Data.MIN_FRIDGE_WEIGHT_KILLOGRAMM + 1);
 		int powerFridge = random.nextInt(Data.MAX_FRIDGE_POWER_WATTS);

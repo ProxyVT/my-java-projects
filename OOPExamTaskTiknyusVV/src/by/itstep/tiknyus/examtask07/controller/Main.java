@@ -20,14 +20,11 @@ public class Main {
 		int powerPluggedIn = Calculator.calcPluggedInPower(apartment);
 		
 		
-		String sort = Sorting.sortbyName();
 
 		Printer.print(apartment);
 		Printer.print("\nTotal power consumption: = " + powerAll 
 				+ "\nincluding plugged in: " + powerPluggedIn);
 		scanner.close();
-		
-		Printer.print("\n\n" + sort);
 
 	}
 

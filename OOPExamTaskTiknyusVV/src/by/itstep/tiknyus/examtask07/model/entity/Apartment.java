@@ -14,14 +14,23 @@ public class Apartment {
 		super();
 		this.devices = devices;
 	}
-	
+
 	public Device get(int index) throws DeviceIndexOutOfBoundException {
-        if (index >= 0 && index < devices.length) {
-            return devices[index];
-        } else {
-            throw new DeviceIndexOutOfBoundException();
-        }
-    }
+		if (index >= 0 && index < devices.length) {
+			return devices[index];
+		} else {
+			throw new DeviceIndexOutOfBoundException();
+		}
+	}
+
+	public Device set(int index, Device device) throws DeviceIndexOutOfBoundException {
+		if (index >= 0 && index < devices.length && device != null) {
+			return devices[index];
+		} else {
+			throw new DeviceIndexOutOfBoundException();
+		}
+
+	}
 
 	public int getDeviceSize() {
 		return devices.length;

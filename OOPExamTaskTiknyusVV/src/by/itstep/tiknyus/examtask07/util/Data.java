@@ -1,6 +1,6 @@
 package by.itstep.tiknyus.examtask07.util;
 
-public class Names {
+public class Data {
 
 	// Fridge
 		public static final double MAX_FRIDGE_WEIGHT_KILLOGRAMM = 100.0;

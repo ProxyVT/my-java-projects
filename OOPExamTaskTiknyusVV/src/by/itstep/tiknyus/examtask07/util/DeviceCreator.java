@@ -30,25 +30,25 @@ public class DeviceCreator {
 
 	public static Device getTypeDevice(int type) {
 
-		String energyRathing = Names.energy[random.nextInt(Names.energy.length)];
-		int shelves = random.nextInt() * (Names.MAX_FRIDGE_FREEZER_SHELVES - Names.MIN_FRIDGE_FREEZER_SHELVES + 1);
+		String energyRathing = Data.energy[random.nextInt(Data.energy.length)];
+		int shelves = random.nextInt() * (Data.MAX_FRIDGE_FREEZER_SHELVES - Data.MIN_FRIDGE_FREEZER_SHELVES + 1);
 		double weightFrdige = random.nextDouble()
-				* (Names.MAX_FRIDGE_WEIGHT_KILLOGRAMM - Names.MIN_FRIDGE_WEIGHT_KILLOGRAMM + 1);
-		int powerFridge = random.nextInt(Names.MAX_FRIDGE_POWER_WATTS);
+				* (Data.MAX_FRIDGE_WEIGHT_KILLOGRAMM - Data.MIN_FRIDGE_WEIGHT_KILLOGRAMM + 1);
+		int powerFridge = random.nextInt(Data.MAX_FRIDGE_POWER_WATTS);
 		boolean socketStatus = random.nextBoolean();
 
-		double price = random.nextDouble() * (Names.MAX_DEVICE_PRICE_DOLLAR - Names.MIN_DEVICE_PRICE_DOLLAR + 1);
+		double price = random.nextDouble() * (Data.MAX_DEVICE_PRICE_DOLLAR - Data.MIN_DEVICE_PRICE_DOLLAR + 1);
 
 		Device device = new Fridge(energyRathing, shelves, weightFrdige, price, socketStatus, powerFridge);
 
 		switch (type) {
 		case 0: {
 
-			String color = Names.colour[random.nextInt(Names.colour.length)];
+			String color = Data.colour[random.nextInt(Data.colour.length)];
 			boolean dryProtection = random.nextBoolean();
 			double weightKettle = random.nextDouble()
-					* (Names.MAX_KETTLE_WEIGHT_KILLOGRAMM - Names.MIN_KETTLE_WEIGHT_KILLOGRAMM + 1);
-			int powerKettle = random.nextInt(Names.MAX_KETTLE_POWER_WATTS);
+					* (Data.MAX_KETTLE_WEIGHT_KILLOGRAMM - Data.MIN_KETTLE_WEIGHT_KILLOGRAMM + 1);
+			int powerKettle = random.nextInt(Data.MAX_KETTLE_POWER_WATTS);
 
 			device = new Kettle(color, dryProtection, weightKettle, price, socketStatus, powerKettle);
 		}
@@ -56,11 +56,11 @@ public class DeviceCreator {
 		case 1: {
 
 			double capacity = random.nextDouble()
-					* (Names.MAX_MICROWAVE_CAPACITY_LITER - Names.MIN_MICROWAVE_CAPACITY_LITER + 1);
-			String fitType = Names.fit[random.nextInt(Names.fit.length)];
+					* (Data.MAX_MICROWAVE_CAPACITY_LITER - Data.MIN_MICROWAVE_CAPACITY_LITER + 1);
+			String fitType = Data.fit[random.nextInt(Data.fit.length)];
 			double weightMicrowave = random.nextDouble()
-					* (Names.MAX_MICROWAVE_WEIGHT_KILLOGRAMM - Names.MIN_MICROWAVE_WEIGHT_KILLOGRAMM + 1);
-			int powerMicrowave = random.nextInt(Names.MAX_MICROWAVE_POWER_WATTS);
+					* (Data.MAX_MICROWAVE_WEIGHT_KILLOGRAMM - Data.MIN_MICROWAVE_WEIGHT_KILLOGRAMM + 1);
+			int powerMicrowave = random.nextInt(Data.MAX_MICROWAVE_POWER_WATTS);
 
 			device = new Microwave(capacity, fitType, weightMicrowave, price, socketStatus, powerMicrowave);
 		}

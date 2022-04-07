@@ -35,7 +35,7 @@ public class Kettle extends Device{
 
 	@Override
 	public String toString() {
-		return "Kettle [colour = " + colour + ", dry protection = " + dryProtection + "" + super.toString();
+		return "Kettle \t\t[colour = " + colour + "\n\t\t dry protection = " + dryProtection + "" + super.toString();
 	}
 
 }

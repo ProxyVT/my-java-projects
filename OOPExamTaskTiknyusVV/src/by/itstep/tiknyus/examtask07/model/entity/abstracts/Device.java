@@ -21,7 +21,7 @@ public class Device {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
@@ -41,7 +41,7 @@ public class Device {
 		this.socketStatus = socketStatus;
 	}
 
-	public double getPowerConsumption() {
+	public int getPowerConsumption() {
 		return power;
 	}
 
@@ -51,8 +51,8 @@ public class Device {
 
 	@Override
 	public String toString() {
-		return ", weight = " + weight + ", price = " + price + ", socket status = " + socketStatus
-				+ ", power = " + power + "]";
+		return " \n\t\t weight = " + weight + "\n\t\t price = " + price + " \n\t\t plugged in = " + socketStatus
+				+ " \n\t\t power = " + power + "]";
 	}
 
 }

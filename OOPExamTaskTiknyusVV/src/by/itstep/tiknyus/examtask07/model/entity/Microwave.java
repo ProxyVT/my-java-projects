@@ -37,7 +37,7 @@ public class Microwave extends Device {
 
 	@Override
 	public String toString() {
-		return "Microwave [capacity = " + capacity + ", fit type = " + fitType + "" + super.toString();
+		return "Microwave \t[capacity = " + capacity + "\n\t\t fit type = " + fitType + "" + super.toString();
 	}
 
 }

@@ -12,35 +12,6 @@ public class DeviceCreator {
 
 	public static final int DEVICE_COUNT = 3;
 
-	// Fridge
-	public static final double MAX_FRIDGE_WEIGHT_KILLOGRAMM = 100.0;
-	public static final double MIN_FRIDGE_WEIGHT_KILLOGRAMM = 1.0;
-	public static final int MAX_FRIDGE_POWER_WATTS = 300;
-	public static final int MIN_FRIDGE_POWER_WATTS = 100;
-
-	public static final int MAX_FRIDGE_FREEZER_SHELVES = 8;
-	public static final int MIN_FRIDGE_FREEZER_SHELVES = 1;
-	public static final String[] material = { "'Best'", "'First'", "'Second'" };
-
-	// Kettle
-	public static final double MAX_KETTLE_WEIGHT_KILLOGRAMM = 2.0;
-	public static final double MIN_KETTLE_WEIGHT_KILLOGRAMM = 0.5;
-	public static final int MAX_KETTLE_POWER_WATTS = 3000;
-	public static final int MIN_KETTLE_POWER_WATTS = 1;
-
-	// Microwave
-	public static final double MAX_MICROWAVE_WEIGHT_KILLOGRAMM = 45.0;
-	public static final double MIN_MICROWAVE_WEIGHT_KILLOGRAMM = 5.0;
-	public static final int MAX_MICROWAVE_POWER_WATTS = 3500;
-	public static final int MIN_MICROWAVE_POWER_WATTS = 500;
-
-	public static final double MAX_MICROWAVE_CAPACITY_LITER = 50.0;
-	public static final double MIN_MICROWAVE_CAPACITY_LITER = 15.0;
-
-	// General device
-	public static final double MAX_DEVICE_PRICE_DOLLAR = 5000.0;
-	public static final double MIN_DEVICE_PRICE_DOLLAR = 1.0;
-
 	private static Random random;
 
 	static {
@@ -59,25 +30,39 @@ public class DeviceCreator {
 
 	public static Device getTypeDevice(int type) {
 
-		String panelMaterial = material[random.nextInt(material.length)];
-		int shelves = random.nextInt() * (MAX_FRIDGE_FREEZER_SHELVES - MIN_FRIDGE_FREEZER_SHELVES + 1);
-		double weight = random.nextDouble()
-				* (Math.ceil(MAX_FRIDGE_WEIGHT_KILLOGRAMM) - Math.ceil(MIN_FRIDGE_WEIGHT_KILLOGRAMM) + 1);
-		double price = random.nextDouble() * (MAX_DEVICE_PRICE_DOLLAR - MIN_DEVICE_PRICE_DOLLAR + 1);
-
-		int power = random.nextInt() % MAX_FRIDGE_POWER_WATTS + MIN_FRIDGE_POWER_WATTS;
-
+		String energyRathing = Names.energy[random.nextInt(Names.energy.length)];
+		int shelves = random.nextInt() * (Names.MAX_FRIDGE_FREEZER_SHELVES - Names.MIN_FRIDGE_FREEZER_SHELVES + 1);
+		double weightFrdige = random.nextDouble()
+				* (Names.MAX_FRIDGE_WEIGHT_KILLOGRAMM - Names.MIN_FRIDGE_WEIGHT_KILLOGRAMM + 1);
+		int powerFridge = random.nextInt(Names.MAX_FRIDGE_POWER_WATTS);
 		boolean socketStatus = random.nextBoolean();
 
-		Device device = new Fridge(panelMaterial, shelves, weight, price, socketStatus, power);
+		double price = random.nextDouble() * (Names.MAX_DEVICE_PRICE_DOLLAR - Names.MIN_DEVICE_PRICE_DOLLAR + 1);
+
+		Device device = new Fridge(energyRathing, shelves, weightFrdige, price, socketStatus, powerFridge);
 
 		switch (type) {
 		case 0: {
-			device = new Kettle();
+
+			String color = Names.colour[random.nextInt(Names.colour.length)];
+			boolean dryProtection = random.nextBoolean();
+			double weightKettle = random.nextDouble()
+					* (Names.MAX_KETTLE_WEIGHT_KILLOGRAMM - Names.MIN_KETTLE_WEIGHT_KILLOGRAMM + 1);
+			int powerKettle = random.nextInt(Names.MAX_KETTLE_POWER_WATTS);
+
+			device = new Kettle(color, dryProtection, weightKettle, price, socketStatus, powerKettle);
 		}
 			break;
 		case 1: {
-			device = new Microwave();
+
+			double capacity = random.nextDouble()
+					* (Names.MAX_MICROWAVE_CAPACITY_LITER - Names.MIN_MICROWAVE_CAPACITY_LITER + 1);
+			String fitType = Names.fit[random.nextInt(Names.fit.length)];
+			double weightMicrowave = random.nextDouble()
+					* (Names.MAX_MICROWAVE_WEIGHT_KILLOGRAMM - Names.MIN_MICROWAVE_WEIGHT_KILLOGRAMM + 1);
+			int powerMicrowave = random.nextInt(Names.MAX_MICROWAVE_POWER_WATTS);
+
+			device = new Microwave(capacity, fitType, weightMicrowave, price, socketStatus, powerMicrowave);
 		}
 			break;
 		}

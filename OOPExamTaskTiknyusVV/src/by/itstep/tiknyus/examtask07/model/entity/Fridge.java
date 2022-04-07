@@ -3,26 +3,26 @@ package by.itstep.tiknyus.examtask07.model.entity;
 import by.itstep.tiknyus.examtask07.model.entity.abstracts.Device;
 
 public class Fridge extends Device {
-	private String panelMaterial;
+	private String energyRathing;
 	private int shelves;
 
 	public Fridge() {
 		super();
 	}
 
-	public Fridge(String panelMaterial, int shelves, double weight, double price, boolean socketStatus, 
+	public Fridge(String energyRathing, int shelves, double weight, double price, boolean socketStatus, 
 			int power) {
 		super(weight, price, socketStatus, power);
-		this.panelMaterial = panelMaterial;
+		this.energyRathing = energyRathing;
 		this.shelves = shelves;
 	}
 
-	public String getPanelMaterial() {
-		return panelMaterial;
+	public String getenergyRathing() {
+		return energyRathing;
 	}
 
-	public void setPanelMaterial(String panelMaterial) {
-		this.panelMaterial = panelMaterial;
+	public void setenergyRathing(String energyRathing) {
+		this.energyRathing = energyRathing;
 	}
 
 	public int getShelves() {
@@ -38,7 +38,7 @@ public class Fridge extends Device {
 
 	@Override
 	public String toString() {
-		return "Fridge [panel material = " + panelMaterial + ", freezer shelves = " + shelves + "" + super.toString();
+		return "Fridge \t\t[energy rathing = " + energyRathing + "\n\t\t freezer shelves = " + shelves + "" + super.toString();
 	}
 
 }

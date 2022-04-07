@@ -10,7 +10,7 @@ public class Apartment {
 		devices = new Device[0];
 	}
 
-	public Apartment(Device[] device) {
+	public Apartment(Device[] devices) {
 		super();
 		this.devices = devices;
 	}

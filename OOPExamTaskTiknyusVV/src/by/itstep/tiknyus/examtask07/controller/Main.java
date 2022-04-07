@@ -15,10 +15,12 @@ public class Main {
 		int count = scanner.nextInt();
 		Apartment apartment = DeviceCreator.create(count);
 
-		double total = Calculator.calcTotalPrice(apartment);
+		int powerAll = Calculator.calcTotalPower(apartment);
+		int powerPluggedIn = Calculator.calcPluggedInPower(apartment);
 
 		Printer.print(apartment);
-		Printer.print("\nTotal price = " + total);
+		Printer.print("\nTotal power consumption: = " + powerAll 
+				+ "\nincluding plugged in: " + powerPluggedIn);
 		scanner.close();
 
 	}

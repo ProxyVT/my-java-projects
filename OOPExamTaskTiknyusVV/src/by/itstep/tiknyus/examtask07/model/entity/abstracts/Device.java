@@ -37,6 +37,11 @@ public class Device {
 		return socketStatus;
 	}
 
+	public String socketCondition(boolean socketStatus) {
+		String condition = socketStatus ? "yes" : "no";
+		return condition;
+	}
+
 	public void setSocketStatus(boolean socketStatus) {
 		this.socketStatus = socketStatus;
 	}
@@ -51,8 +56,8 @@ public class Device {
 
 	@Override
 	public String toString() {
-		return " \n\t\t weight = " + weight + "\n\t\t price = " + price + " \n\t\t plugged in = " + socketStatus
-				+ " \n\t\t power = " + power + "]";
+		return " \n\t\t weight = " + weight + "\n\t\t price = " + price + " \n\t\t plugged in = "
+				+ socketCondition(socketStatus) + " \n\t\t power = " + power + "\n";
 	}
 
 }

@@ -38,7 +38,7 @@ public class Fridge extends Device {
 
 	@Override
 	public String toString() {
-		return "Fridge \t\t[energy rathing = " + energyRathing + "\n\t\t freezer shelves = " + shelves + "" + super.toString();
+		return "Fridge \t\t energy rathing = " + energyRathing + "\n\t\t freezer shelves = " + shelves + "" + super.toString();
 	}
 
 }

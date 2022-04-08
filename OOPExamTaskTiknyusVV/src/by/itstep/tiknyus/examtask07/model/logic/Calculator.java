@@ -6,6 +6,7 @@ import by.itstep.tiknyus.examtask07.model.exception.DeviceIndexOutOfBoundExcepti
 
 public class Calculator {
 
+	// Power calculation
 	public static int calcTotalPower(Apartment apartment) {
 		int total = 0;
 

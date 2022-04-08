@@ -1,6 +1,6 @@
 package by.itstep.tiknyus.examtask07.util;
 
-public class Data {
+public interface Data {
 
 	// Fridge
 		public static final double MAX_FRIDGE_WEIGHT_KILLOGRAMM = 100.0;
@@ -33,5 +33,12 @@ public class Data {
 		// General device
 		public static final double MAX_DEVICE_PRICE_DOLLAR = 5000.0;
 		public static final double MIN_DEVICE_PRICE_DOLLAR = 1.0;
+		
+		//Switching block
+		public static final int SHOW_DEVICES = 1;
+		public static final int CALCULATE_DEVICES = 2;
+		public static final int SORT_DEVICES = 3;
+		public static final int EXIT_PROGRAMM = 4;
+		public static final String ERROR_MESSAGE = "Wrong value, try again!";
 
 }

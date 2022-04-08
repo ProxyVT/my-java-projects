@@ -8,7 +8,7 @@ import by.itstep.tiknyus.examtask07.model.entity.Fridge;
 import by.itstep.tiknyus.examtask07.model.entity.Kettle;
 import by.itstep.tiknyus.examtask07.model.entity.Microwave;
 
-public class DeviceCreator {
+public class DeviceCreator implements Data {
 
 	public static final int DEVICE_COUNT = 3;
 

@@ -23,9 +23,9 @@ public class Apartment {
 		}
 	}
 
-	public Device set(int index, Device device) throws DeviceIndexOutOfBoundException {
+	public void set(int index, Device device) throws DeviceIndexOutOfBoundException {
 		if (index >= 0 && index < devices.length && device != null) {
-			return devices[index];
+			devices[index] = device;
 		} else {
 			throw new DeviceIndexOutOfBoundException();
 		}
@@ -34,6 +34,25 @@ public class Apartment {
 
 	public int getDeviceSize() {
 		return devices.length;
+	}
+
+	public void switchToType(Device device) {
+		int index = 0;
+		switch (index) {
+		case 1:
+			device.getWeight();
+			break;
+		case 2:
+			device.getPrice();
+			break;
+		case 3:
+			device.getPowerConsumption();
+			break;
+
+		default:
+			device.toString();
+			break;
+		}
 	}
 
 	public void add(Device device) {
@@ -46,8 +65,9 @@ public class Apartment {
 		devices = temp;
 	}
 
+	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder("List of devices:\n");
+		StringBuilder builder = new StringBuilder("\n");
 
 		for (Device device : devices) {
 			builder.append(device).append("\n");

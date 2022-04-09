@@ -35,10 +35,34 @@ public interface Data {
 		public static final double MIN_DEVICE_PRICE_DOLLAR = 1.0;
 		
 		//Switching block
-		public static final int SHOW_DEVICES = 1;
-		public static final int CALCULATE_DEVICES = 2;
+			// Step one
+		public static final int CREATE_DEVICES = 1;
+		public static final int EXIT_PROGRAMM_STEP_ONE = 2;
+		public static final int BACK = 4;
+			// Step two
+		public static final int CALCULATE_DEVICES = 1;
+		public static final int SEARCH_DEVICES = 2;
 		public static final int SORT_DEVICES = 3;
-		public static final int EXIT_PROGRAMM = 4;
+		public static final int EXIT_PROGRAMM_STEP_TWO = 4;
+		
+			// Calculator switch
+		public static final int TOTAL_POWER = 1;
+		public static final int PLUGGED_IN = 2;
+		public static final int TWO_VALUES = 3;
+		
+			// Max min searcher
+		public static final int MAX = 1;
+		public static final int MIN = 2;
+		
+			// Values
+		public static final int PRICE = 1;
+		public static final int WEIGHT = 2;
+		public static final int POWER_CONSUMPTION = 3;
+		public static final int NAME = 4;
+		public static final int BACKWARD = 5;
+		
+		
+		
 		public static final String ERROR_MESSAGE = "Wrong value, try again!";
 
 }

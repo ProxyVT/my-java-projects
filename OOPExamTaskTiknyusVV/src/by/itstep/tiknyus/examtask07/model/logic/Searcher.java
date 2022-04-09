@@ -44,4 +44,80 @@ public class Searcher {
 
 		return device;
 	}
+	
+	public static Device getMaxWeightDevice(Apartment apartment) {
+		int index = 0;
+		Device device = null;
+
+		try {
+			for (int i = 0; i < apartment.getDeviceSize(); i++) {
+				if (apartment.get(index).getWeight() < apartment.get(i).getWeight()) {
+					index = i;
+				}
+			}
+			device = apartment.get(index);
+
+		} catch (DeviceIndexOutOfBoundException e) {
+			// ...``
+		}
+
+		return device;
+	}
+	
+	public static Device getMinWeightDevice(Apartment apartment) {
+		int index = 0;
+		Device device = null;
+
+		try {
+			for (int i = 0; i < apartment.getDeviceSize(); i++) {
+				if (apartment.get(index).getWeight() > apartment.get(i).getWeight()) {
+					index = i;
+				}
+			}
+			device = apartment.get(index);
+
+		} catch (DeviceIndexOutOfBoundException e) {
+			// ...``
+		}
+
+		return device;
+	}
+	
+	public static Device getMaxPowerDevice(Apartment apartment) {
+		int index = 0;
+		Device device = null;
+
+		try {
+			for (int i = 0; i < apartment.getDeviceSize(); i++) {
+				if (apartment.get(index).getPowerConsumption() < apartment.get(i).getPowerConsumption()) {
+					index = i;
+				}
+			}
+			device = apartment.get(index);
+
+		} catch (DeviceIndexOutOfBoundException e) {
+			// ...``
+		}
+
+		return device;
+	}
+	
+	public static Device getMinPowerDevice(Apartment apartment) {
+		int index = 0;
+		Device device = null;
+
+		try {
+			for (int i = 0; i < apartment.getDeviceSize(); i++) {
+				if (apartment.get(index).getPowerConsumption() > apartment.get(i).getPowerConsumption()) {
+					index = i;
+				}
+			}
+			device = apartment.get(index);
+
+		} catch (DeviceIndexOutOfBoundException e) {
+			// ...``
+		}
+
+		return device;
+	}
 }
